@@ -9,17 +9,16 @@ public class RandomMachine {
     private int counter;
 
     public RandomMachine() {
-        this.names = new String[]{"Maciej", "Marcin", "Michał", "Damian", "Piotr", "Dawid", "Marta"};
-        this.isPresent = new boolean[]{true, true, true, true, true, true, true};
+        this.names = new String[]{"Maciej", "Krzysztof", "Mateusz", "Michał K.", "Piotr", "Przemysław",
+                "Marta", "Tomek", "Filip", "Sebastian", "Dawid", "Damian", "Michał P.", "Andrzej"};
+        this.isPresent = new boolean[]{true, true, true, true, true, true, true, true, true, true, true,
+                true, true, true};
         this.randomizer = new ArrayList<>();
         this.counter = 0;
     }
 
     private void prepareRandomizer() {
 
-//        if (!randomizer.isEmpty()) {
-//            randomizer.clear();
-//        }
         for (int i = 0; i < names.length; i++) {
             if (isPresent[i]) {
                 randomizer.add(names[i]);
@@ -42,6 +41,10 @@ public class RandomMachine {
         } else {
             return "żadna osoba nie została zaznaczona!";
         }
+    }
+
+    public String getName (int id){
+        return names[id];
     }
 
     public int getClicksLeft() {
