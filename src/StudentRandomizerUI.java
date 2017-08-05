@@ -21,7 +21,7 @@ public class StudentRandomizerUI {
 
     private void prepareGUI() {
         mainFrame = new Frame("Program losujący");
-        mainFrame.setSize(450, 300);
+        mainFrame.setSize(500, 350);
         mainFrame.setResizable(false);
         mainFrame.setLayout(new GridLayout(5, 1));
         mainFrame.addWindowListener(new WindowAdapter() {
